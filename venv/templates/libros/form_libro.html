@@ -1,0 +1,40 @@
+{% extends "plantilla.html" %}
+
+	{% if libro_e %}
+		{% set libro_e=libro_e %}
+	{% else %}
+		{%set libro_e="Nuevo libro" %}
+	{% endif %}
+
+{% block titulo %}
+	FORMULARIO: {{libro_e}}
+{% endblock titulo %}
+
+{% block contenido %}
+	<h1>Formulario: {{libro_e}}</h1>
+	<div class="container container-sm">
+		<form action="" method="post">
+		<div class="mb-3">
+			<label for="titulo" class="form-control">TITULO DEL LIBRO</label>
+			<input type="text" class="form-control" id="titulo" name="titulo">
+		</div>
+		<div class="mb-3">
+			<label for="descripcion" class="form-control">DESCRIPCION</label>
+			<input type="text-area" class="form-control" id="descripcion" name="descripcion">
+		</div>
+		<div class="mb-3">
+			<label for="descripcion" class="form-control">EDITORIAL</label>
+			<input type="text-area" class="form-control" id="editorial" name="editorial">
+		</div>
+		<div class="mb-3">
+			<label for="descripcion" class="form-control">NUMERO DE PAGINAS</label>
+			<input type="text-area" class="form-control" id="numero_paginas" name="numero_paginas">
+		</div>
+		<div class="mb-3">
+			<label for="descripcion" class="form-control">AÑO</label>
+			<input type="text-area" class="form-control" id="año" name="año">
+		</div>
+		<button type="submit" class="btn btn-primary">GUARDAR</button>
+		</form>
+	</div>
+{% endblock contenido %}

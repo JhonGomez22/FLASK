@@ -1,0 +1,28 @@
+{% extends "plantilla.html" %}
+
+{% block titulo %}
+	BIBLIOTECA: 
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="container container-sm">
+	<h1>BIBLIOTECA </h1>
+	<div class="list-group">		
+			<a href="/biblioteca/mision/" class="list-group-item list-group-item-action">
+				MISION
+			</a>
+			<a href="/biblioteca/vision/" class="list-group-item list-group-item-action">
+				VISION
+			</a>
+			<a href="/biblioteca/contactenos/" class="list-group-item list-group-item-action">
+				CONTACTENOS
+			</a>
+			<a href="/libros/libro/" class="list-group-item list-group-item-action">
+				CREAR LIBRO
+			</a>
+			<a href="/" class="list-group-item list-group-item-action">
+				LISTADO
+			</a>
+	</div>
+</div>
+{% endblock contenido %}
